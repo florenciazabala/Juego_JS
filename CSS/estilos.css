@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    margin-top: 100px;
+    /* grid-column-gap: 50% 50%; */
+}
+#imagen{
+    height: 300px;
+    
+}
+#opciones{
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+input{
+    margin: 10px;
+}
+.btn{
+    width: 200px;
+    padding: 5px;
+    background-color: rgb(8, 218, 255, 0.747);
+    color: white;
+    border:none;
+    font-size: 16px;
+}
+.btn:hover{
+    background-color: rgb(236, 92, 40);
+    color: white;
+}
+section{
+    display: inline-grid;
+    /* border: 1px solid black; */
+    justify-content: center;
+    margin-top: 50px;
+    padding: 10px;
+}
+.resultado{
+    display: grid;
+    height: 300px;
+    grid-gap: 1rem;
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-content: center;
+    margin-top: 40px;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.infoTotal{
+    background-color: rgb(160, 142, 142);
+    padding: 3px;
+}
+
+#total{
+    grid-column: 1 / 3;
+}
