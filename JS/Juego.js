@@ -45,7 +45,7 @@ function guardar(valor){
 function jugadaContinuar(jugadaContinuar){
     var z=guardar();
     var y =z-1;
-    var opciones=["piedra","papel","tijera"];
+    var opciones=["PIEDRA","PAPEL","TIJERA"];
     var jugadaContinuar=opciones[y];
     return jugadaContinuar;
 }
