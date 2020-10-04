@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;700&family=Pragati+Narrow&family=Quicksand:wght@400;500;600&display=swap');
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
+}
+h1{
+    text-transform: uppercase;
+    font-size: 50px;
 }
 .container{
     display: grid;
@@ -24,10 +29,10 @@ input{
     margin: 15px;
 }
 #opcion{
-    width: 200px;
+    width: 230px;
 }
 .btn{
-    width: 200px;
+    width: 230px;
     margin-top: 10px;
     padding: 5px;
     background-color: rgb(8, 218, 255, 0.747);
@@ -41,8 +46,9 @@ input{
 }
 section{
     display: inline-grid;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     justify-content: center;
+    align-content: center;
     margin-top: 50px;
     padding: 10px;
 }

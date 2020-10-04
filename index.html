@@ -18,14 +18,14 @@
             <label><input type="radio" name="opcion" class="opcion" value="1" checked onfocus="CambiarImagen(1)">Piedra: 1</label><br>
             <label><input type="radio" name="opcion" class="opcion" value="2" onfocus="CambiarImagen(2)">Papel: 2</label><br>
             <label><input type="radio" name="opcion" class="opcion" value="3" onfocus="CambiarImagen(3)">Tijera: 3</label><br>
-            <label>Ingrese el numero de su jugada: <br><input type="numbre" name="opcion" id="opcion" min="1" max="3"></label><br>
+            <label>Ingrese el numero de su jugada: <br><input type="numbre" name="opcion" id="opcion" min="1" max="3" placeholder="Ej: 1"></label><br>
             <button class="btn" onclick="confirmaJuego();">Jugar!</button>
         </div>
     </div>
     <section>
         <div class="resultado">
             <div><img src="IMAGENES/icognito.png" alt="" id="incognitoUsuario"></div>
-            <div><h3>VS</h3></div>
+            <div><h3>VS</h3 id="vs"></div>
             <div><img src="IMAGENES/icognito.png" id="incognitoMaquina"></div>
         </div>
         <div class="info">

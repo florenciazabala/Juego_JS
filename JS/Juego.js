@@ -142,9 +142,11 @@ function confirmaJuego(){
                 total.innerHTML=("RESULTADO : "+final);
                 break;
         }
-
-		return true;
+        document.querySelector('#opcion').value="";
+        return true;
+        
 	}else{
+        document.querySelector('#opcion').value="";
 		return false;
 	}
 }
