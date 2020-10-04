@@ -14,19 +14,12 @@
             <img src="IMAGENES/piedra.png" alt="" id="jugada">
         </div>
         <div id="opciones">
-           
-                <h3>OPCIONES:</h3>
-                <label><input type="radio" name="opcion" class="opcion" value="1"  checked onfocus="CambiarImagen(1)">Piedra: 1</label><br>
-                <label><input type="radio" name="opcion" class="opcion" value="2" onfocus="CambiarImagen(2)"></label>Papel: 2<br>
-                <label><input type="radio" name="opcion" class="opcion" value="3" onfocus="CambiarImagen(3)"></label>Tijera: 3<br>
-                <!-- <label>Ingrese el numero de su jugada: <br><input type="number" id="jugada" ></label><br> -->
-                <!-- <button name="opcion" class="opcion" id="jugada" onclick="CambiarImagen(1)" onclick="usuario(1)">Piedra: 1</button><br>
-                <button name="opcion" class="opcion" id="jugada"onclick="CambiarImagen(2)" onclick="usuario(2)">Papel: 2</button><br>
-                <button name="opcion" class="opcion" id="jugada"onclick="CambiarImagen(3)" onclick="usuario(3)">Tijera: 3</button><br> -->
-                <button class="btn" onclick="confirmaJuego();">Jugar!</button>
-            
-            
-            
+            <h3>OPCIONES:</h3>
+            <label><input type="radio" name="opcion" class="opcion" value="1" checked onfocus="CambiarImagen(1)">Piedra: 1</label><br>
+            <label><input type="radio" name="opcion" class="opcion" value="2" onfocus="CambiarImagen(2)">Papel: 2</label><br>
+            <label><input type="radio" name="opcion" class="opcion" value="3" onfocus="CambiarImagen(3)">Tijera: 3</label><br>
+            <label>Ingrese el numero de su jugada: <br><input type="numbre" name="opcion" id="opcion" min="1" max="3"></label><br>
+            <button class="btn" onclick="confirmaJuego();">Jugar!</button>
         </div>
     </div>
     <section>

@@ -38,10 +38,23 @@ function aleatorio(minimo, maximo)
     var numero = Math.floor( Math.random() * (maximo - minimo + 1) + minimo );
     return numero;
 }
+function guardar(valor){
+  var valor=parseInt(document.querySelector('#opcion').value);
+  return valor;
+}
+function jugadaContinuar(jugadaContinuar){
+    var z=guardar();
+    var y =z-1;
+    var opciones=["piedra","papel","tijera"];
+    var jugadaContinuar=opciones[y];
+    return jugadaContinuar;
+}
 function confirmaJuego(){
-    var confirmar=window.confirm("Desea iniciar el juego?");
+    var confirmar=window.confirm("Su jugada es: "+jugadaContinuar()+"\nDesea continuar?");
+    var opciones=["piedra","papel","tijera"];
 	if(confirmar){
-        var eleccionUsuario=parseInt(window.prompt("Escriba el numero de su jugada: \nPiedra: 1  \nPapel: 2 \nTijera: 3"));
+        /* var eleccionUsuario=parseInt(window.prompt("Escriba el numero de su jugada: \nPiedra: 1  \nPapel: 2 \nTijera: 3")); */
+        var eleccionUsuario= guardar();
         var opciones=["piedra","papel","tijera"];
         var jugadaUsuario= opciones[eleccionUsuario-=1];
         var eleccionMaquina= aleatorio(1,3);
@@ -55,7 +68,7 @@ function confirmaJuego(){
         
         switch (resultado) {
             case "piedrapiedra":
-                var final="EMPATE, Tal vez la proxima tengas mas suete!"
+                var final="EMPATE, Tal vez la proxima tengas mas suerte!"
                 total.innerHTML=("RESULTADO : "+final);
                 CambiarImagenResultadoU(1);
                 CambiarImagenResultadoM(1);
@@ -86,7 +99,7 @@ function confirmaJuego(){
 
             case "papelpapel":
         
-                var final="EMPATE, Tal vez la proxima tengas mas suete!";
+                var final="EMPATE, Tal vez la proxima tengas mas suerte!";
                 total.innerHTML=("RESULTADO : "+final);
                 CambiarImagenResultadoU(2);
                 CambiarImagenResultadoM(2);
@@ -118,7 +131,7 @@ function confirmaJuego(){
 
             case "tijeratijera":
                 
-                var final="EMPATE, Tal vez la proxima tengas mas suete!";
+                var final="EMPATE, Tal vez la proxima tengas mas suerte!";
                 total.innerHTML=("RESULTADO : "+final);
                 CambiarImagenResultadoU(3);
                 CambiarImagenResultadoM(3);
