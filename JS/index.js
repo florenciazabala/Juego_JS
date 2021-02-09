@@ -1,60 +1,55 @@
+let formulario = document.querySelector("#jug");
+let opcionUsuario;
 
-function CambiarImagen(valor){
-    var imagen = document.getElementById('jugada');
+function obtenerEleccionUsuario (){
+    formulario.onclick = function (){
+        opcionUsuario = parseInt(document.querySelector("#jug").opcion.value);
+        cambiarImagenOpciones(opcionUsuario);
+    }
+}
+
+obtenerEleccionUsuario();
+
+function cambiarImagenOpciones(valor){
+    let imagen = document.getElementById('jugada');
+
     if(valor==1){
-        imagen.src="../IMAGENES/piedra.png" ;
+        imagen.src="IMAGENES/piedra.png" ;
     } else if(valor==2){
-        imagen.src="../IMAGENES/papel.png" ;
+        imagen.src="IMAGENES/papel.png" ;
     } else if(valor==3){
-        imagen.src="../IMAGENES/tijera.png" ;
-    }
-    
-    
+        imagen.src="IMAGENES/tijera.png" ;
+    } 
 }
 
-function CambiarImagenResultadoU(valorUsuario){
-    var imagenU=document.getElementById('incognitoUsuario');
-    if(valorUsuario==1){
-        imagenU.src="../IMAGENES/piedra.png" ;
-    }else if(valorUsuario==2){
-        imagenU.src="../IMAGENES/papel.png" ;
-    }else if(valorUsuario==3){
-        imagenU.src="../IMAGENES/tijera.png" ;
-    }
-}
-function CambiarImagenResultadoM(valorMaquina){
-    var imagenM=document.getElementById('incognitoMaquina');
-    if(valorMaquina==1){
-        imagenM.src="../IMAGENES/piedra.png" ;
-    }else if(valorMaquina==2){
-        imagenM.src="../IMAGENES/papel.png" ;
-    }else if(valorMaquina==3){
-        imagenM.src="../IMAGENES/tijera.png" ;
-    }
-}
 
-function aleatorio(minimo, maximo)
-{
+
+function aleatorio(minimo, maximo){
     var numero = Math.floor( Math.random() * (maximo - minimo + 1) + minimo );
     return numero;
 }
-function guardar(valor){
-  var valor=parseInt(document.querySelector('#opcion').value);
-  return valor;
-}
+
+
 function jugadaContinuar(jugadaContinuar){
-    var z=guardar();
+    var z= opcionUsuario;
     var y =z-1;
     var opciones=["PIEDRA","PAPEL","TIJERA"];
     var jugadaContinuar=opciones[y];
     return jugadaContinuar;
 }
+
+let $botonJugar = document.querySelector("#botonJugar");
+$botonJugar.onclick = function(event){
+    event.preventDefault();
+    confirmaJuego();
+} 
+
 function confirmaJuego(){
     var confirmar=window.confirm("Su jugada es: "+jugadaContinuar()+"\nDesea continuar?");
     var opciones=["piedra","papel","tijera"];
 	if(confirmar){
         /* var eleccionUsuario=parseInt(window.prompt("Escriba el numero de su jugada: \nPiedra: 1  \nPapel: 2 \nTijera: 3")); */
-        var eleccionUsuario= guardar();
+        var eleccionUsuario= opcionUsuario;
         var opciones=["piedra","papel","tijera"];
         var jugadaUsuario= opciones[eleccionUsuario-=1];
         var eleccionMaquina= aleatorio(1,3);
@@ -145,11 +140,30 @@ function confirmaJuego(){
         document.querySelector('#opcion').value="";
         return true;
         
-	}else{
-        document.querySelector('#opcion').value="";
-		return false;
 	}
+
 }
 
 
 
+function CambiarImagenResultadoU(valorUsuario){
+    var imagenU=document.getElementById('incognitoUsuario');
+    if(valorUsuario==1){
+        imagenU.src="IMAGENES/piedra.png" ;
+    }else if(valorUsuario==2){
+        imagenU.src="IMAGENES/papel.png" ;
+    }else if(valorUsuario==3){
+        imagenU.src="IMAGENES/tijera.png" ;
+    }
+}
+
+function CambiarImagenResultadoM(valorMaquina){
+    var imagenM=document.getElementById('incognitoMaquina');
+    if(valorMaquina==1){
+        imagenM.src="IMAGENES/piedra.png" ;
+    }else if(valorMaquina==2){
+        imagenM.src="IMAGENES/papel.png" ;
+    }else if(valorMaquina==3){
+        imagenM.src="IMAGENES/tijera.png" ;
+    }
+}

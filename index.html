@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="CSS/estilos.css">
+
     <title>Piedra Papel o Tijera</title>
 </head>
 <body>
@@ -14,14 +18,29 @@
             <img src="IMAGENES/piedra.png" alt="" id="jugada">
         </div>
         <div id="opciones">
-            <h3>OPCIONES:</h3>
-            <label><input type="radio" name="opcion" class="opcion" value="1" checked onfocus="CambiarImagen(1)">Piedra: 1</label><br>
-            <label><input type="radio" name="opcion" class="opcion" value="2" onfocus="CambiarImagen(2)">Papel: 2</label><br>
-            <label><input type="radio" name="opcion" class="opcion" value="3" onfocus="CambiarImagen(3)">Tijera: 3</label><br>
-            <label>Ingrese el numero de su jugada: <br><input type="numbre" name="opcion" id="opcion" min="1" max="3" placeholder="Ej: 1"></label><br>
-            <button class="btn" onclick="confirmaJuego();">Jugar!</button>
+            <form name="opciones" id="jug">
+                <h5>OPCIONES:</h5>
+                <p>
+                    <label><input type="radio" name="opcion" class="opcion" value="1" >
+                     <span>Piedra</span>   
+                    </label><br>
+                </p>
+                <p>
+                    <label><input type="radio" name="opcion" class="opcion" value="2">
+                     <span>Papel</span>   
+                    </label><br>
+                </p>
+                <p>
+                    <label><input type="radio" name="opcion" class="opcion" value="3">
+                      <span>Tijera</span>  
+                    </label><br>
+                </p>
+                
+                <button class="btn" id="botonJugar">Jugar!</button>
+            </form>
         </div>
     </div>
+
     <section>
         <div class="resultado">
             <div><img src="IMAGENES/icognito.png" alt="" id="incognitoUsuario"></div>
@@ -29,17 +48,27 @@
             <div><img src="IMAGENES/icognito.png" id="incognitoMaquina"></div>
         </div>
         <div class="info">
-            <h4 id="usuario">Tu jugada: </h4>
-            <h4 id="maquina">Jugada de la maquina: </h4>
+            <h6 id="usuario">Tu jugada: </h6>
+            <h6 id="maquina">Jugada de la maquina: </h6>
         </div>
         <div class="infoTotal"> 
-            <h3 id="total">RESULTADO: </h3>
+            <h5 id="total">RESULTADO: </h5>
         </div>
 
     </section>
     
-    
-    
-    <script src="JS/Juego.js"></script>
+     <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="JS/index.js"></script>
 </body>
 </html>
